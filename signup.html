@@ -39,12 +39,25 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="sign__content">
-						
+						<style>
+							a.sign:link{
+								color:rgb(255, 0, 128);
+							}
+							a.sign:visited{
+								color:rgb(255, 0, 128);
+							}
+							a.sign:hover{
+								color:white;
+							}
+							a.sign:active{
+								color:Violet;
+							}
+						</style>
 						<!-- registration form -->
 						<form action="#" class="sign__form">
 							<div>
 								<span class="icon-close">
-									<a href="index.html"><ion-icon name="close"></ion-icon></a>
+									<a href="index.html" class="sign"><ion-icon name="close"></ion-icon></a>
 								</span>
 							</div>
 
@@ -69,8 +82,12 @@
 								<label for="remember">I agree to the <a href="#">Privacy Policy</a></label>
 							</div>
 							
-							<button class="sign__btn" type="button">Sign up</button>
-
+							<button class="sign__btn" type="button" onclick="abc()">Sign up</button>
+							<script>
+								function abc(){
+									alert("Bạn đã đăng kí thành công");
+								}
+							</script>
 							<span class="sign__text">Already have an account? <a href="signin.html">Sign in!</a></span>
 						</form>
 						<!-- registration form -->
