@@ -75,17 +75,9 @@
 									<a href="design.html" class="header__nav-link">Design</a>
 								</li>
 
-								<!-- dropdown -->
-								<li class="dropdown header__nav-item">
-									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#"
-										role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false"><i class="icon ion-ios-more"></i></a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="404.html">404 Page</a></li>
-									</ul>
+								<li class="header__nav-item">
+									<a href="#" class="header__nav-link" onclick="openContactForm()">Liên hệ</a>
 								</li>
-								<!-- end dropdown -->
 							</ul>
 							<!-- end header nav -->
 
@@ -169,7 +161,7 @@
 						<div class="price__item" style="justify-content: start; flex-wrap: wrap;">
 							<span style="margin-left: 4%;">STT: 01 </span> 
 							<span style="margin-left: 4%;">Họ và Tên: Nguyễn Trọng Nhân</span>
-							<span style="margin-left: 4%;">Công việc:Group daiary</span>
+							<span style="margin-left: 4%;">Công việc: Tìm Template</span>
 							<span style="margin-left: 4%;">Ngày bắt đầu: 24/11/2023</span>
 							<span style="margin-left: 4%;">Ngày kết thúc: 29/11/2023</span>
 						</div>
@@ -194,21 +186,21 @@
 						<div class="price__item" style="justify-content: start; flex-wrap: wrap;">
 							<span style="margin-left: 4%;">STT: 01 </span> 
 							<span style="margin-left: 4%;">Họ và Tên: Nguyễn Trọng Nhân</span>
-							<span style="margin-left: 4%;">Công việc: Group daiary</span>
+							<span style="margin-left: 4%;">Công việc: Biểu mẩu liên hệ</span>
 							<span style="margin-left: 4%;">Ngày bắt đầu: 24/12/2023</span>
 							<span style="margin-left: 4%;">Ngày kết thúc: 29/12/2023</span>
 						</div>
 						<div class="price__item" style="justify-content: start; flex-wrap: wrap;">
 							<span style="margin-left: 4%;">STT: 02 </span> 
 							<span style="margin-left: 4%;">Họ và Tên: Phạm Quốc Phương Nam</span>
-							<span style="margin-left: 4%;">Công việc: Login</span>
+							<span style="margin-left: 4%;">Công việc: thêm web cá nhân</span>
 							<span style="margin-left: 4%;">Ngày bắt đầu: 24/12/2023</span>
 							<span style="margin-left: 4%;">Ngày kết thúc: 29/12/2023</span>
 						</div>
 						<div class="price__item" style="justify-content: start; flex-wrap: wrap;">
 							<span style="margin-left: 4%;">STT: 03 </span> 
 							<span style="margin-left: 4%;">Họ và Tên: Đặng Tấn Kiệt</span>
-							<span style="margin-left: 4%;">Công việc: Trang Home</span>
+							<span style="margin-left: 4%;">Công việc: Home tab New</span>
 							<span style="margin-left: 4%;">Ngày bắt đầu: 24/12/2023</span>
 							<span style="margin-left: 4%;">Ngày kết thúc: 29/12/2023</span>
 						</div>
@@ -255,14 +247,14 @@
 						<div class="price__item" style="justify-content: start; flex-wrap: wrap;">
 							<span style="margin-left: 4%;">STT: 04 </span> 
 							<span style="margin-left: 4%;">Họ và Tên: Nguyễn Hoàng Lĩnh</span>
-							<span style="margin-left: 4%;">Công việc: Trang Catalog</span>
+							<span style="margin-left: 4%;">Công việc: Catalog transition</span>
 							<span style="margin-left: 4%;">Ngày bắt đầu: 2/1/2024</span>
 							<span style="margin-left: 4%;">Ngày kết thúc: 7/1/2023</span>
 						</div>
 						<div class="price__item" style="justify-content: start; flex-wrap: wrap;">
 							<span style="margin-left: 4%;">STT: 05 </span> 
 							<span style="margin-left: 4%;">Họ và Tên: Nguyễn Minh Hiệp</span>
-							<span style="margin-left: 4%;">Công việc: Liên hệ</span>
+							<span style="margin-left: 4%;">Công việc: Chỉnh groupdiary</span>
 							<span style="margin-left: 4%;">Ngày bắt đầu: 2/1/2024</span>
 							<span style="margin-left: 4%;">Ngày kết thúc: 7/1/2023</span>
 						</div>
@@ -274,7 +266,76 @@
 		</div>
 	</div>
 	<!-- end faq -->
+	<style>
+		/* Styling for the popup form */
+		.popup {
+			display: none;
+			transition: 0.5s;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 2px solid #ccc;
+			padding: 20px;
+			background-color: whitesmoke;
+			z-index: 1;
+			width: 350px;
 
+		}
+
+		/* Styling for the overlay background */
+		.overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 0;
+		}
+	</style>
+	<!-- Popup Form -->
+	<div id="contactForm" class="popup">
+		<h2>Liên hệ</h2>
+		<form action="" method="post">
+			<label for="">Tên:</label>
+			<input type="text" required placeholder="Họ và tên"
+				style="width: 250px; height: 30px; margin: 0px 0px 0px 20px;">
+
+			<label for="">Email:</label>
+			<input type="email" required placeholder="Email" style="width: 250px; height: 30px;margin: 0px 0px 0px 5px;">
+			<label for="">Lời nhắn:</label>
+			<br>
+			<textarea id="text" name="message" style="margin-left: 20px; max-width: 250px; width: 220px; height: 200px;"
+				placeholder="Nhập lời nhắn"></textarea>
+
+			<div style="display: flex ;">
+				<button onclick="closeContactForm()"
+					style="width: 150px;height: 40px; margin-top: 30px; background-color: red; border-radius: 5px;">Close</button>
+				<button type="submit"
+					style="margin-left: 20%; width: 150px;height: 40px; margin-top: 30px; background-color: #0d6efd; border-radius: 5px;">Submit</button>
+			</div>
+
+		</form>
+
+	</div>
+
+	<!-- Overlay Background -->
+	<div id="overlay" class="overlay" onclick="closeContactForm()"></div>
+
+	<script>
+		function openContactForm() {
+
+			document.getElementById("contactForm").style.display = "block";
+			document.getElementById("overlay").style.display = "block";
+		}
+
+		function closeContactForm() {
+			document.getElementById("contactForm").style.display = "none";
+			document.getElementById("overlay").style.display = "none";
+		}
+	</script>
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
