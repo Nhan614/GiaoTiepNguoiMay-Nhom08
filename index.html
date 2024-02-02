@@ -75,7 +75,7 @@
 								</li>
 
 								<li class="header__nav-item">
-									<a href="#" class="header__nav-link" onclick="openContactForm()">Liên hệ</a>
+									<a href="contact.html" class="header__nav-link" >Contact</a>
 								</li>
 							</ul>
 							<!-- end header nav -->
@@ -253,23 +253,9 @@
 						<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab"
-									aria-controls="tab-1" aria-selected="true">NEW RELEASES</a>
+									aria-controls="tab-1" aria-selected="true">MOVIES</a>
 							</li>
 
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
-									aria-selected="false">MOVIES</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
-									aria-selected="false">TV SERIES</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4"
-									aria-selected="false">CARTOONS</a>
-							</li>
 						</ul>
 						<!-- end content tabs nav -->
 
@@ -1494,78 +1480,7 @@
 		</div>
 	</section>
 	<!-- end expected premiere -->
-	<style>
-		/* Styling for the popup form */
-		.popup {
-			display: none;
-			transition: 0.5s;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			border: 2px solid #ccc;
-			padding: 20px;
-			background-color: whitesmoke;
-			z-index: 1;
-			width: 350px;
-
-		}
-
-		/* Styling for the overlay background */
-		.overlay {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.7);
-			z-index: 0;
-		}
-	</style>
-	<!-- Popup Form -->
-	<div id="contactForm" class="popup">
-		<h2>Liên hệ</h2>
-		<form action="" method="post">
-			<label for="">Tên:</label>
-			<input type="text" required placeholder="Họ và tên"
-				style="width: 250px; height: 30px; margin: 0px 0px 0px 20px;">
-
-			<label for="">Email:</label>
-			<input type="email" required placeholder="Email" style="width: 250px; height: 30px;margin: 0px 0px 0px 5px;">
-			<label for="">Lời nhắn:</label>
-			<br>
-			<textarea id="text" name="message" style="margin-left: 20px; max-width: 250px; width: 220px; height: 200px;"
-				placeholder="Nhập lời nhắn"></textarea>
-
-			<div style="display: flex ;">
-				<button onclick="closeContactForm()"
-					style="width: 150px;height: 40px; margin-top: 30px; background-color: red; border-radius: 5px;">Close</button>
-				<button type="submit"
-					style="margin-left: 20%; width: 150px;height: 40px; margin-top: 30px; background-color: #0d6efd; border-radius: 5px;">Submit</button>
-			</div>
-
-		</form>
-
-	</div>
-
-	<!-- Overlay Background -->
-	<div id="overlay" class="overlay" onclick="closeContactForm()"></div>
-
-	<script>
-		function openContactForm() {
-
-			document.getElementById("contactForm").style.display = "block";
-			document.getElementById("overlay").style.display = "block";
-		}
-
-		function closeContactForm() {
-			document.getElementById("contactForm").style.display = "none";
-			document.getElementById("overlay").style.display = "none";
-		}
-	</script>
-
-
+	
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
@@ -1621,7 +1536,7 @@
 				<div class="col-12">
 					<div class="footer__copyright">
 						<small><a target="_blank" href="index.html">
-							Infini-8</a></small>
+							Infini-8 | 	Copyright 2024 	&#169; Group 8</a></small>
 
 						<ul>
 							<li><a href="#">Terms of Use</a></li>
