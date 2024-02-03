@@ -75,17 +75,9 @@
 									<a href="design.html" class="header__nav-link">Design</a>
 								</li>
 
-								<!-- dropdown -->
-								<li class="dropdown header__nav-item">
-									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#"
-										role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false"><i class="icon ion-ios-more"></i></a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="404.html">404 Page</a></li>
-									</ul>
+								<li class="header__nav-item">
+									<a href="contact.html" class="header__nav-link" >Contact</a>
 								</li>
-								<!-- end dropdown -->
 							</ul>
 							<!-- end header nav -->
 
@@ -232,26 +224,6 @@
 									<li>DVD</li>
 									<li>TS</li>
 								</ul>
-							</div>
-							<!-- end filter item -->
-
-							<!-- filter item -->
-							<div class="filter__item" id="filter__rate">
-								<span class="filter__item-label">IMBd:</span>
-
-								<div class="filter__item-btn dropdown-toggle" role="button" id="filter-rate"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<div class="filter__range">
-										<div id="filter__imbd-start"></div>
-										<div id="filter__imbd-end"></div>
-									</div>
-									<span></span>
-								</div>
-
-								<div class="filter__item-menu filter__item-menu--range dropdown-menu"
-									aria-labelledby="filter-rate">
-									<div id="filter__imbd"></div>
-								</div>
 							</div>
 							<!-- end filter item -->
 
@@ -707,7 +679,78 @@
 		</div>
 	</section>
 	<!-- end expected premiere -->
+	<style>
+		/* Styling for the popup form */
+		.popup {
+			display: none;
+			transition: 0.5s;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 2px solid #ccc;
+			padding: 20px;
+			background-color: whitesmoke;
+			z-index: 1;
+			width: 350px;
 
+		}
+
+		/* Styling for the overlay background */
+		.overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 0;
+		}
+	</style>
+	<!-- Popup Form -->
+	<div id="contactForm" class="popup">
+		<h2>Liên hệ</h2>
+		<form action="" method="post">
+			<label for="">Tên:</label>
+			<input type="text" required placeholder="Họ và tên"
+				style="width: 250px; height: 30px; margin: 0px 0px 0px 20px;">
+
+			<label for="">Email:</label>
+			<input type="email" required placeholder="Email" style="width: 250px; height: 30px;margin: 0px 0px 0px 5px;">
+			<label for="">Lời nhắn:</label>
+			<br>
+			<textarea id="text" name="message" style="margin-left: 20px; max-width: 250px; width: 220px; height: 200px;"
+				placeholder="Nhập lời nhắn"></textarea>
+
+			<div style="display: flex ;">
+				<button onclick="closeContactForm()"
+					style="width: 150px;height: 40px; margin-top: 30px; background-color: red; border-radius: 5px;">Close</button>
+				<button type="submit"
+					style="margin-left: 20%; width: 150px;height: 40px; margin-top: 30px; background-color: #0d6efd; border-radius: 5px;">Submit</button>
+			</div>
+
+		</form>
+
+	</div>
+
+	<!-- Overlay Background -->
+	<div id="overlay" class="overlay" onclick="closeContactForm()"></div>
+
+	<script>
+		function openContactForm() {
+
+			document.getElementById("contactForm").style.display = "block";
+			document.getElementById("overlay").style.display = "block";
+		}
+
+		function closeContactForm() {
+			document.getElementById("contactForm").style.display = "none";
+			document.getElementById("overlay").style.display = "none";
+		}
+	</script>
+
+	</div>
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
@@ -763,7 +806,7 @@
 				<div class="col-12">
 					<div class="footer__copyright">
 						<small><a target="_blank" href="index.html">
-							Infini-8</a></small>
+							Infini-8 | 	Copyright 2024 	&#169; Group 8</a></small>
 
 						<ul>
 							<li><a href="#">Terms of Use</a></li>

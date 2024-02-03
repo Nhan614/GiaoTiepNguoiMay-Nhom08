@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -33,17 +33,35 @@
 	<title>Group08</title>
 
 </head>
+
 <body class="body">
 	<div class="sign section--bg" data-bg="img/section/section.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="sign__content">
+						<style>
+							a.sign:link {
+								color: rgb(255, 0, 128);
+							}
+
+							a.sign:visited {
+								color: rgb(255, 0, 128);
+							}
+
+							a.sign:hover {
+								color: white;
+							}
+
+							a.sign:active {
+								color: Violet;
+							}
+						</style>
 						<!-- authorization form -->
 						<form action="#" class="sign__form">
 							<div>
 								<span class="icon-close">
-									<a href="index.html"><ion-icon name="close"></ion-icon></a>
+									<a href="index.html" class="sign"><ion-icon name="close"></ion-icon></a>
 								</span>
 							</div>
 							<a href="index.html" class="sign__logo">
@@ -62,35 +80,41 @@
 								<input id="remember" name="remember" type="checkbox" checked="checked">
 								<label for="remember">Remember Me</label>
 							</div>
-							
-							<button class="sign__btn" type="button">Sign in</button>
 
+							<a href="index.html" class="sign__btn1 hello"><button class="sign__btn" type="button" onclick="abc()" > Sign
+									in</button></a>
+								<script>
+									function abc() {
+										alert("Bạn đã đăng nhập thành công!");
+									}
+								</script>
+							
 							<span class="sign__text">Don't have an account? <a href="signup.html">Sign up!</a></span>
 
 							<span class="sign__text"><a href="forgotpassword.html">Forgot password?</a></span>
 						</form>
 						<!-- end authorization form -->
+
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- JS -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.mousewheel.min.js"></script>
-	<script src="js/jquery.mCustomScrollbar.min.js"></script>
-	<script src="js/wNumb.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/plyr.min.js"></script>
-	<script src="js/jquery.morelines.min.js"></script>
-	<script src="js/photoswipe.min.js"></script>
-	<script src="js/photoswipe-ui-default.min.js"></script>
-	<script src="js/main.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<!-- JS -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.min.js"></script>
+		<script src="js/wNumb.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/plyr.min.js"></script>
+		<script src="js/jquery.morelines.min.js"></script>
+		<script src="js/photoswipe.min.js"></script>
+		<script src="js/photoswipe-ui-default.min.js"></script>
+		<script src="js/main.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
